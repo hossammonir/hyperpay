@@ -1,0 +1,30 @@
+{
+    "name": "hossammonir/hyperpay",
+    "description": "A Global Standard in Online Payments, for fast-growing businesses in the MENA region.",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "HossamMonir\\HyperPay\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hossam Monir",
+            "email": "hey@digitaltunnel.net"
+        }
+    ],
+    "require": {
+        "php": "^8.2"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HossamMonir\\HyperPay\\HyperPayServiceProvider"
+            ],
+            "aliases": {
+                "HyperPay": "HossamMonir\\HyperPay\\Facades\\HyperPay"
+            }
+        }
+    }
+}
