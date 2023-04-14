@@ -4,7 +4,7 @@ namespace HossamMonir\HyperPay\Services;
 
 use Exception;
 use HossamMonir\HyperPay\Contracts\HyperPay;
-use HossamMonir\HyperPay\Enums\PaymentMethod;
+use HossamMonir\HyperPay\Enums\HyperPayPaymentMethod;
 use HossamMonir\HyperPay\Interfaces\CheckoutInterface;
 use HossamMonir\HyperPay\Traits\Processor;
 use Illuminate\Support\Arr;
@@ -27,7 +27,7 @@ class PrepareCheckout extends HyperPay implements CheckoutInterface
     /**
      * set payment method to ['config'].
      */
-    public function setMethod(PaymentMethod $paymentMethod): static
+    public function setMethod(HyperPayPaymentMethod $paymentMethod): static
     {
         $this->config['payment_method'] = $paymentMethod->value;
 

@@ -2,11 +2,11 @@
 
 namespace HossamMonir\HyperPay\Interfaces;
 
-use HossamMonir\HyperPay\Enums\PaymentMethod;
+use HossamMonir\HyperPay\Enums\HyperPayPaymentMethod;
 
 interface CheckoutInterface
 {
-    public function setMethod(PaymentMethod $paymentMethod): static;
+    public function setMethod(HyperPayPaymentMethod $paymentMethod): static;
 
     public function setTransactionId(string $transactionId): self;
 

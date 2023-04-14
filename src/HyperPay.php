@@ -4,7 +4,7 @@ namespace HossamMonir\HyperPay;
 
 use Exception;
 use HossamMonir\HyperPay\Data\Customer;
-use HossamMonir\HyperPay\Enums\PaymentMethod;
+use HossamMonir\HyperPay\Enums\HyperPayPaymentMethod;
 use HossamMonir\HyperPay\Exceptions\InvalidPaymentMethod;
 use HossamMonir\HyperPay\Services\Backoffice;
 use HossamMonir\HyperPay\Services\PaymentStatus;
@@ -35,7 +35,7 @@ class HyperPay
     /**
      * Set Payment Method to ['config'].
      */
-    public function setMethod(PaymentMethod $paymentMethod): self
+    public function setMethod(HyperPayPaymentMethod $paymentMethod): self
     {
         $this->paymentMethod = ['payment_method' => $paymentMethod->value];
 

@@ -2,7 +2,7 @@
 
 namespace HossamMonir\HyperPay\Enums;
 
-enum PaymentMethod: string
+enum HyperPayPaymentMethod: string
 {
     case MADA = 'MADA';
     case VISA = 'VISA';

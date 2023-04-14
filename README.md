@@ -72,11 +72,11 @@ HYPERPAY_COMPANY_POSTCODE="your-company-postal-code"
 
 ```php
     use HossamMonir\HyperPay\Facades\HyperPay;
-    use HossamMonir\HyperPay\Enums\PaymentMethod;
+    use HossamMonir\HyperPay\Enums\HyperPayPaymentMethod;
     use HossamMonir\HyperPay\Data\Customer;
 
         HyperPay::setAmount('100.50') // amount must match ^[0-9]{1,12}(\\.[0-9]{2})?$ 
-        ->setMethod(PaymentMethod::VISA)
+        ->setMethod(HyperPayPaymentMethod::VISA)
         ->setCurrency('SAR')
         ->setTransactionId('123123123') // your should create unique transaction id for each payment
         ->setCustomer(new Customer(
