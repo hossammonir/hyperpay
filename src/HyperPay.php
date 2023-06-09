@@ -35,9 +35,13 @@ class HyperPay
     /**
      * Set Payment Method to ['config'].
      */
-    public function setMethod(HyperPayPaymentMethod $paymentMethod): self
+    public function setMethod(string $paymentMethod): self
     {
-        $this->paymentMethod = ['payment_method' => $paymentMethod->value];
+        $method = HyperPayPaymentMethod::tryFrom(
+            value: strtoupper($paymentMethod)
+        )->value;
+
+        $this->paymentMethod = ['payment_method' => $method];
 
         return $this;
     }
