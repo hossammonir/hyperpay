@@ -37,11 +37,7 @@ class HyperPay
      */
     public function setMethod(string $paymentMethod): self
     {
-        $method = HyperPayPaymentMethod::tryFrom(
-            value: strtoupper($paymentMethod)
-        )->value;
-
-        $this->paymentMethod = ['payment_method' => $method];
+        $this->paymentMethod = ['payment_method' => $paymentMethod];
 
         return $this;
     }
