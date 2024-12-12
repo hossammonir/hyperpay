@@ -171,6 +171,7 @@ class PrepareCheckout extends HyperPay implements CheckoutInterface
     protected function withBasic(): void
     {
         $this->config['paymentType'] = 'DB';
+        $this->config['integrity'] = 'true';
     }
 
     /**
